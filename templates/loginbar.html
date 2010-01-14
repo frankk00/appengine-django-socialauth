@@ -1,0 +1,39 @@
+<div id="loginbar">
+<div class="controls">
+<a href="#" class="signin">sign in</a>
+{% if user.is_authenticated %}
+<div style="float:right;">{{ user.screenName }}</div>
+{% endif %}
+</div>
+<ul id="logindetails">
+    <li class="head"></li>
+    <li class="content">
+        <form method="post" action="{% url django.contrib.auth.views.login %}">
+            <p>
+            <label for="socialauth_username">username or email:</label><br />
+            <input type="text" id="socialauth_username" name="username" />
+            </p>
+            <p>
+            <label for="socialauth_password">password:</label><br />
+            <input type="password" id="socialauth_password" name="password" />
+            </p>
+            <p>
+            <input type="submit" value="Login" />
+            <input type="checkbox" name="remember_me" id="socialauth_rememberme" />
+            <label for="socialauth_rememberme">remember me</label>
+            </p>
+            <ul>
+                <li><a href="{% url registration.views.register %}">register</a></li>
+                <li><a href="{% url django.contrib.auth.views.login %}">forgotten password</a></li>
+            </ul>
+            <h5>or sign in with:</h5>
+            <ul class="socialauth-options">
+            <li><fb:login-button size="small" background="dark" length="short" onlogin="window.location = '/social_auth/fb-login'"></fb:login-button></li>
+            <li><a href="{% url social_auth.views.twitter_login %}" alt="Login with Twitter"><img src="{{ MEDIA_URL }}social_auth/images/twitter.png" /></a></li>
+            <li><a href="#" alt="Login with Google Friend Connect"><img src="{{ MEDIA_URL }}social_auth/images/google.png" /></a></li>
+            </ul>
+        </form>
+    </li>
+    <li class="base"></li>  	        
+</ul>
+</div>

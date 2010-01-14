@@ -1,0 +1,105 @@
+/*
+ * File:	social_auth.style.css
+ * This file is used to define default styling for the twitter profile details
+ * 
+ * Section:	Version History
+ * 10/06/2009 (DJO) - Created File
+ */
+
+#loginbar {
+    float: right;
+    width: 300px;
+    margin: 58px -15px 0px 0px;
+}
+
+#loginbar .controls {
+    margin: 0px 10px 0px 0px;
+    text-align: right;
+    height: 27px;
+}
+
+#loginbar .controls a {
+    display: block;
+    float: right;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+}
+
+#loginbar .controls a.signin {
+    background: url(images/button-signin.png) no-repeat;
+    width: 72px;
+    height: 27px;
+    padding: 5px 0px 0px 10px;
+}
+
+#loginbar .controls a.signin:hover {
+    background: url(images/button-signin-hover.png) no-repeat;
+}
+
+ul#logindetails {
+    width: 295px;
+    position: absolute;
+    z-index: 100;
+    margin: 11px 0px 0px 0px;
+    padding: 0px;
+    list-style-type: none;
+    display: none;
+}
+
+ul#logindetails li {
+    margin: 0px;
+    padding: 0px;
+}
+
+#logindetails .head {
+    background: url(images/login-bg-top.png) no-repeat left top;
+    height: 10px;
+}
+
+#logindetails .content {
+    background: url(images/login-bg.png) repeat-y;
+    padding: 5px 0px 0px 17px;
+}
+
+#logindetails .content label {
+    font-weight: normal;
+}
+
+#logindetails .content input[type=text], #logindetails .content input[type=password]  {
+    width: 250px;
+}
+
+#logindetails .content input[type=checkbox] {
+    vertical-align: middle;
+}
+
+#logindetails .content h5 {
+    margin: 4px;
+    font-weight: normal;
+}
+
+#logindetails .content p {
+    margin: 0px 0px 6px 0px;
+}
+
+#logindetails .content ul {
+    margin: 10px 5px;
+    list-style-type: none;
+}
+
+#logindetails .base {
+    background: url(images/login-bg-base.png) no-repeat left top;
+    height: 15px;
+}
+
+#logindetails ul.socialauth-options {
+    margin: 6px 0px 0px 0px;
+    list-style-type: none;
+    height: 30px;
+}
+
+#logindetails ul.socialauth-options li {
+    float: left;
+    margin: 0px 0px 0px 6px;    
+}

@@ -1,0 +1,11 @@
+<div class="twitter-profile">
+	<img src="{{ user.profileImageUrl }}" alt="{{ user.username }}" />
+	<h4>{{ user.username }}</h4>
+	<ul class="profile-details">
+		<li class="profile-detail-location">{{ user.location }}</li>
+	</ul>
+	<ul class="profile-actions">
+		<li class="profile-action-logout"><a href="{% url django.contrib.auth.views.logout %}">Logout</a></li>
+	</ul>
+</div>
+

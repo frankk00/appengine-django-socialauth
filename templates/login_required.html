@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Login Required{% endblock %}
+
+{% block content %}
+<div class="error">
+<p>You need to be logged in to access this feature.</p>
+<p>This site uses Twitter for authentication, so if you would like to login to access this feature, please click
+the &quot;Login with Twitter&quot; button below.</p>
+</div>
+<a href="{% url twitter_auth.views.login %}" class="button" title="Login with Twitter">Login with Twitter</a>
+{% endblock %}
